@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="shortcut icon" href="/News-app/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"> 
+</head>
+<body>
+    
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="company-logo" onclick="reload()">
+                <img src="/News-app/assets/news_logo.png" alt="news_logo">
+            </a>
+            
+            <div class="burger flex">
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li class="hover-links nav-items" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                        <li class="hover-links nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+                        <li class="hover-links nav-items" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    </ul>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" class="news-input" id="search-text" placeholder="e.g, Cricket">
+                    <button class="search-button" id="search-button">Search</button>
+                </div>
+
+            </div>
+            <div class="menu">
+                <i class="ri-menu-line"></i>
+                <i class="ri-close-line"></i>
+            </div>
+
+           
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+           
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="news-title" id="news-title">This is title</h3>
+                    <h6 class="news-source" id="news-source">End gadget 08/10/2023</h6>
+                    <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aliquam quasi fuga officia, exercitationem sit rerum nisi quod vitae incidunt?</p>
+                </div>
+            </div>
+
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
